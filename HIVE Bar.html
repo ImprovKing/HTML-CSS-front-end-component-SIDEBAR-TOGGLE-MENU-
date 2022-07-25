@@ -1,0 +1,146 @@
+<html>
+    <head> 
+        <title> Side Bar Toggle MENU</title>
+    </head>
+    <body>
+        <header>
+            <h4> LOREM IPSUM ON HIVE</h4>
+            <input type="checkbox" id="check" name="checkbox" />
+            <label for="check" class="side-bar-togg">
+                <div> </div> 
+                <div> </div> 
+                <div> </div> 
+            </label>
+            <nav id="mainSideBar"> 
+                <ul class="inner-side-bar">
+                    <li> Programming and Devs</li>
+                    <li> HIVE Tech Community</li>
+                    <li> STEM Community</li>
+                    <li> About to be Dsicovered </li>
+                </ul>
+            </nav>
+        </header>
+
+        <h3>
+               <p>  This is the pure HTML and CSS SIDEBAR TOGGLE MENU 
+            example designed with illustrator
+
+            BY Alexander Philip (fox lead).......
+            </p>
+        </h3> 
+    </body>
+    <style>
+body{
+    max-width : 100% ;
+    min-width : 320px;
+    height : auto ;
+    margin: 0 auto 0 auto ;
+    position: relative;
+    background-color: #fff;
+}
+
+*{
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body p{
+    text-align: center;
+    display: inline-block;
+    width : 100% ;
+    color : #000;
+    margin-top : 30% ;
+}
+header{
+    width : 100% ;
+    height: 50px;
+    background : #fff ;
+    box-shadow: 1px 1px 2px  #141414, -1px -1px 2px #141414;
+    text-align: center;
+    padding : 10px;
+}
+input{
+    display: none;
+    visibility: hidden;
+}
+.side-bar-togg{
+    width : 40px;
+    height :40px;
+    position : absolute ;
+    cursor: pointer;
+    left : 10px;
+    top : 10px;
+}
+.side-bar-togg div:nth-child(1){
+    width : 50% ;
+}
+.side-bar-togg div:nth-child(2){
+    width : 70% ;
+}
+.side-bar-togg div{
+    background-color:#606060;
+    display: block;
+    margin : 5px;
+    border-radius: 5px;
+    height: 8px;
+}
+nav{
+    width: 250px;
+    height: 100vh;
+    background-color: #0e2228 ;
+    display: block;
+    position: absolute ;
+    right: 0;
+    transform: translateX(250px);
+    top : 0;
+    text-align: center;
+    text-transform: capitalize;
+    color : #fff ;
+}
+ul{
+    width : 100% ;
+    padding : 0;
+    height : 100% ;
+}
+li{
+    display: block;
+    margin-top : 10% ;
+    margin-bottom: 10%;
+    cursor: pointer;
+    padding : 10px 15px ;
+    text-align: center;
+    width : 100% ;
+    text-align: center;
+}
+li:hover{
+    color : #0e2228 ;
+    background : #fff ;
+}
+
+#check:checked ~ .side-bar-togg div:nth-child(1){
+    transform: rotate(-60deg);
+    transition: all .5s;
+    width : 100% ;
+}
+#check:checked ~ .side-bar-togg div:nth-child(2){
+    display: none ;
+    visibility: hidden;
+}
+#check:checked ~ .side-bar-togg div:nth-child(3){
+    transform: rotate(60deg);
+    transition: all linear .5s;
+    width : 100% ;
+}
+#check:checked ~ #mainSideBar{
+    transform: translateX(0px);
+    transition: all .5s;
+}
+@media screen and (max-width : 500px) {
+    *{
+        font-size: smaller;
+    }
+}
+
+
+
+    </style>
